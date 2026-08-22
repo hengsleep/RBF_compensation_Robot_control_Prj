@@ -42,16 +42,17 @@ Comprehensive verification on a multi-input multi-output (MIMO) 2-DOF robotic ma
 
 #### State Tracking Profiles
 
-|               Position Tracking ($q_1, q_2$) | Speed Tracking ($\dot{q}_1, \dot{q}_2$)               |                                                                                                    |
-| :-------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------: |
-| ![2DOF Position Tracking](<python_result_pdf/readme_figures/Sim2_S=3_S1=2_m=5%20Position%20Tracking.png>) | ![2DOF Speed Tracking](<python_result_pdf/readme_figures/Sim2_S=3_S1=2_m=5%20Speed%20Tracking.png>) |
+| Position Tracking ($q_1$, $q_2$) | Speed Tracking ($\dot{q}_1$, $\dot{q}_2$) |
+| :--------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
+| ![2DOF Position Tracking](python_result_pdf/readme_figures/Sim2_S=3_S1=2_m=5%20Position%20Tracking.png) | ![2DOF Speed Tracking](python_result_pdf/readme_figures/Sim2_S=3_S1=2_m=5%20Speed%20Tracking.png) |
+| *Accurate angular position tracking for joint 1 and joint 2 under 20% model uncertainty.* | *Rapid transient response and velocity error convergence under nonlinear disturbances.* |
 
 #### Disturbance Estimation
 
-|                                       Unknown Disturbance Approximation                                       |
-| :------------------------------------------------------------------------------------------------------------: |
-| ![Disturbance Estimation](<python_result_pdf/readme_figures/Sim2_S=3_S1=2_m=5%20Disturbance%20Estimation.png>) |
-|         *Real-time neural network approximation accurately matching external disturbance dynamics.*         |
+| Unknown Disturbance Approximation |
+| :---: |
+| ![Disturbance Estimation](python_result_pdf/readme_figures/Sim2_S=3_S1=2_m=5%20Disturbance%20Estimation.png) |
+| *Real-time neural network approximation accurately matching external disturbance dynamics.* |
 
 ---
 
