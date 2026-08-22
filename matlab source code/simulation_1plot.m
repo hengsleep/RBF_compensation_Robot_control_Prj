@@ -5,8 +5,8 @@ figure(1); % 创建跟踪效果图窗口
 subplot(211); % 创建2行1列第1个子图：位置跟踪
 plot(t,x(:,1),'r',t,x(:,2),'k:','linewidth',2);
 % x(:,1) = qd（期望位置，Sine Wave 直接来的 sin(t)）
-% x(:,2) = q（实际位置，simulation_1plant 输出的第1维）
-% x(:,3) = dq（实际速度，simulation_1plant 输出的第2维）
+% x(:,2) = q（实际位置，chap6_1plant 输出的第1维）
+% x(:,3) = dq（实际速度，chap6_1plant 输出的第2维）
 % 红线表示期望轨迹，黑色虚线表示系统跟踪结果
 
 xlabel('time(s)'); % 横坐标：时间
