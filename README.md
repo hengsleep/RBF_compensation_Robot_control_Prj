@@ -1,22 +1,30 @@
-# Adaptive RBF Neural Control for Multi-Joint Robotic Manipulators
+# Adaptive Control of Robotic Manipulators with RBF and σ-Modification
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![MATLAB/Simulink](https://img.shields.io/badge/MATLAB-R2021b%2B-blue.svg)](https://www.mathworks.com/)
 [![Python](https://img.shields.io/badge/Python-3.8%2B-green.svg)](https://www.python.org/)
 
-An adaptive Radial Basis Function (RBF) neural network control framework for trajectory tracking of uncertain robotic manipulators, equipped with dynamic dynamic inversion, Lyapunov stability proofs, and $\sigma$-modification parameter tuning.
+A Lyapunov-based adaptive control framework for trajectory tracking of uncertain robotic manipulators, integrating RBF neural network approximation and $\sigma$-modification adaptive laws for robust uncertainty compensation and parameter boundedness.
 
 ---
 
 ## Overview
 
-This repository implements an adaptive Radial Basis Function (RBF) neural network control scheme for trajectory tracking of uncertain robotic manipulators. The architecture integrates a computed torque control (CTC) framework with online RBF neural network approximation to compensate for unknown nonlinear dynamics, external disturbances, and modeling uncertainties.
+This repository implements a nonlinear adaptive control framework for trajectory tracking of uncertain robotic manipulators.
+
+The proposed architecture integrates computed torque control (CTC) with online RBF neural network approximation to estimate lumped system uncertainties, while a Lyapunov-based adaptive law with $\sigma$-modification guarantees closed-loop stability and prevents adaptive parameter drift.
 
 ### Key Features
 
 * **Dual-Loop Architecture:** Outer-loop trajectory tracking separated from inner-loop dynamic compensation.
-* **Online Approximation:** RBF neural networks continuously estimate lumped modeling uncertainties and disturbances.
-* **Guaranteed Stability:** Lyapunov-derived adaptive update law with $\sigma$-modification prevents parameter drift under persistent approximation errors.
+* **Lyapunov-Based Stability Analysis:** 
+  Closed-loop stability analysis with Uniform Ultimate Boundedness (UUB) guarantee for the tracking error system.
+* **σ-Modification Adaptive Law:** 
+  Adaptive parameter update mechanism designed to prevent weight drift under persistent approximation errors.
+* **RBF Neural Approximation:** 
+  Online estimation of lumped nonlinear uncertainties and external disturbances.
+* **Multi-System Verification:** 
+  Validated on both 1-DOF nonlinear servo dynamics and 2-DOF MIMO robotic manipulators.
 * **Multi-System Verification:** Validated on both 1-DOF nonlinear servo dynamics and 2-DOF MIMO robotic manipulators.
 
 ---
@@ -71,7 +79,10 @@ Comprehensive verification on a multi-input multi-output (MIMO) 2-DOF robotic ma
 
 ---
 
-## Mathematical Formulation
+## Control Architecture and Stability Analysis
+
+The control design follows a Lyapunov-based adaptive control framework. 
+The unknown nonlinear dynamics and external disturbances are treated as lumped uncertainties and approximated using an RBF neural network.
 
 The rigid robotic manipulator dynamics are governed by the Euler-Lagrange equation:
 
