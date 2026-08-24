@@ -25,7 +25,6 @@ The proposed architecture integrates computed torque control (CTC) with online R
   Online estimation of lumped nonlinear uncertainties and external disturbances.
 * **Multi-System Verification:** 
   Validated on both 1-DOF nonlinear servo dynamics and 2-DOF MIMO robotic manipulators.
-* **Multi-System Verification:** Validated on both 1-DOF nonlinear servo dynamics and 2-DOF MIMO robotic manipulators.
 
 ---
 
